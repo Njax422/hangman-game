@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Hangman</title>
+  <!--   <script type="text/javascript" src="game.js"></script> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  </head>
+  <body>
+    <div class="page-header">
+      <h1>Hangman<small>  Meme theme</small></h1>
+    </div>
+    <div>
+      <div class="row"> 
+        <div class="col-md-2"></div>
+        <!--container start -->
+        <div class="col-md-8 border container">
+        <!--leftside start -->
+          <div class="col-sm-6 border">
+            <div class="row border"></div>
+              <a href="#" class="thumbnail">
+                <img src="..." alt="..." height="100px" width="100px">
+              </a>
+            <div class="row border">
+              <h2>Fun Facts</h2>
+            </div>
+          </div>
+          <!--rightside start -->
+         <div class="col-sm-6 border">
+            <div class="row border">
+              <p>Type any letter to start guessing</p>
+            </div>
+            <div class="row border">
+              <p>Score</p>
+              <!-- Calculates how many times a word was correctly guessed within the allowed amount of guesses -->
+            </div>
+            <div class="row border">
+              <p>Word</p>
+              <!-- Displays one underscore for each letter in the word
+              If player guess = a letter(s) in the word, replace the underscore with that letter. -->
+            </div>
+            <div class="row border">
+              <p>Guesses Remaining</p>
+            <!--   Total allowed guesses - event listener, how many times a key has been pressed = guesses remaining
+            Avoid counting duplicates -->
+            </div>
+            <div class="row border">
+              <p>Letters Guesesed</p>
+              <!-- Display event listener keys pressed
+              Avoid displaying duplicates -->
+          </div>
+        </div>
+        <!--container end -->
+        <div class="col-md-2"></div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>
