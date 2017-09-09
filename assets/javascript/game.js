@@ -8,8 +8,32 @@
   a)Reduces numberOfGuesses by 1, don't count duplicates
   b)IF player guess = a letter(s) in the word, THEN replace the underscore with that letter.   
 */
+    var allowedCharacters, 
+    memeNames, 
+    keyPressed, 
+    lettersGuessed, 
+    lettersMatched,  
+    lives, 
+    currentMeme;
+
+// var availableWords = ['GrumpyCat', 'Lolcat', 'Success Kid', 'Kermit'];  
+// var singleRandom = arrayNum[Math.floor(Math.random() * arrayNum.length)];
+// alert(singleRandom);
+
+document.onkeydown = function(event) {
+  var keyPressed = String.fromCharCode(event.keyCode);
+  document.getElementById('kp').innerHTML = key_press;  
+  }
+
+// if (event.key) {
+//         alert(" ");
+//       }
+//       else (confirmGingerTea) {
+//         alert("You like ginger tea!!");
+//       }
 
 
+/*
      // // Here we create our variables which will take in user input.
      //  var userName = prompt("What's your name?");
      //  var confirmCats = confirm("Do you like cats?");

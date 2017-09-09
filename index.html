@@ -1,12 +1,19 @@
 <!DOCTYPE html>
+<script type="text/javascript">
+document.onkeydown = function(event) {
+  var keyPressed = String.fromCharCode(event.keyCode);
+  document.getElementById('kp').innerHTML = keyPressed;  
+  }
+</script>
+
 <html lang="en-us">
   <head>
     <meta charset="UTF-8">
     <title>Hangman</title>
-  <!--   <script type="text/javascript" src="game.js"></script> -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-  </head>
+<!--     <script type="text/javascript" src="assets/javascript/game.js"></script>
+ -->  </head>
   <body>
     <div class="page-header">
       <h1>Hangman<small>  Meme theme</small></h1>
@@ -33,22 +40,15 @@
             </div>
             <div class="row border">
               <p>Score</p>
-              <!-- Calculates how many times a word was correctly guessed within the allowed amount of guesses -->
             </div>
             <div class="row border">
               <p>Word</p>
-              <!-- Displays one underscore for each letter in the word
-              If player guess = a letter(s) in the word, replace the underscore with that letter. -->
             </div>
             <div class="row border">
               <p>Guesses Remaining</p>
-            <!--   Total allowed guesses - event listener, how many times a key has been pressed = guesses remaining
-            Avoid counting duplicates -->
             </div>
             <div class="row border">
-              <p>Letters Guesesed</p>
-              <!-- Display event listener keys pressed
-              Avoid displaying duplicates -->
+              Letters Guessed: <span id="kp"></span><br>
           </div>
         </div>
         <!--container end -->
