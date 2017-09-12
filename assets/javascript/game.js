@@ -1,13 +1,19 @@
-var words = ['grumpycat', 'lolcat', 'success kid', 'kermit'];
+var words = ['grumpycat',
+	'lolcat',
+	'successkid',
+	'kermit',
+	'willywonka',
+	'sheldon',
+	'oprah',
+	'philosoraptor'];
 var word = words[Math.floor(Math.random()*words.length)];
 	console.log('word: ', word);
 var answer = [];
-
-var remainingLetters=word.length;
 var guess; 
 var guesses = [];
 var guessesRemaining = 6;
 var winPoints=0;
+var keepPlaying;
 
 	for (var i=0; i<word.length; i++){
 		answer.push("-");
@@ -28,12 +34,17 @@ var winPoints=0;
 	 				answer[i] = event.key;	
 	 			}
 	 		}
+	 		document.getElementById('currentWord').innerHTML= answer.join("");
+
 	 		if (answer.indexOf("-")===-1) {
 	 			winPoints++;
 	 			document.getElementById("winPoints").innerHTML=winPoints;
+		 			var keepPlaying = confirm("You won! Want to play again?");
+			 			if (keepPlaying) {
+			 				reset();
+				 		}
 	 		}
 
-	 		document.getElementById('currentWord').innerHTML= answer.join("");	
 	 	} else {
 	 		
 	 		if(guesses.indexOf(event.key)===-1) {
@@ -42,36 +53,25 @@ var winPoints=0;
 		 		document.getElementById("guessesRemaining").innerHTML=guessesRemaining;
 		 		guesses.push(event.key);
 		 		document.getElementById("lettersGuessed").innerHTML=guesses;
+				if (guessesRemaining===0) {
+		 			keepPlaying = confirm("You lose! Want to play again?");
+			 			if (keepPlaying) {
+			 				reset();
+				 		}
+				}
 		 	}
-
-
-
-
-
-
-
-
-
-
-
-
-		 	
 	 	}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 	 };
+	 function reset() {
+		guessesRemaining = 6;
+		document.getElementById("guessesRemaining").innerHTML=guessesRemaining;
+		guesses = [];
+		document.getElementById("lettersGuessed").innerHTML=guesses;
+		answer.length = 0;
+		word = words[Math.floor(Math.random()*words.length)];
+			for (var i=0; i<word.length; i++){
+				answer.push("-");
+			}
+		document.getElementById('currentWord').innerHTML= answer.join("");
+		console.log(word);
+	}
