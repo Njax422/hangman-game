@@ -1,73 +1,60 @@
 <!DOCTYPE html>
-<script type="text/javascript">
-document.onkeydown = function(event) {
-  var keyPressed = String.fromCharCode(event.keyCode);
-  document.getElementById('kp').innerHTML = keyPressed;  
-  }
-</script>
-
 <html lang="en-us">
-  <head>
-    <meta charset="UTF-8">
-    <title>Hangman</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-<!--     <script type="text/javascript" src="assets/javascript/game.js"></script>
- -->  </head>
-  <body>
-    <div class="page-header">
-      <h1>Hangman<small>  Meme theme</small></h1>
-    </div>
-    <div>
-      <div class="row"> 
-        <div class="col-md-2"></div>
-        <!--container start -->
-        <div class="col-md-8 border container">
-        <!--leftside start -->
-          <div class="col-sm-6 border">
-            <div class="row border"></div>
-              <a href="#" class="thumbnail">
-                <img src="..." alt="..." height="100px" width="100px">
-              </a>
-            <div class="row border">
-              <h2>Fun Facts</h2>
-            </div>
-          </div>
-          <!--rightside start -->
-         <div class="col-sm-6 border">
-            <div class="row border">
-              <p>Type any letter to start guessing</p>
-            </div>
-            <div class="row border">
-              <p>Score</p>
-            </div>
-            <div class="row border">
-              <p>Word</p>
-            </div>
-            <div class="row border">
-              <p>Guesses Remaining</p>
-            </div>
-            <div class="row border">
-              Letters Guessed: <span id="kp"></span><br>
-          </div>
-        </div>
-        <!--container end -->
-        <div class="col-md-2"></div>
-      </div>
-    </div>
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+	<title>Hangman-Game</title>
+
+	
+	<!--Bootstrap CDN-->
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
 
+</head>
 
+<body>
+<div class="container">
+	<h1>Hangman</h1>
+		<div class="row">
+			<div class="col-sm-6">
+				<!--html canvas drawing or pics goes here--> 
+			</div>
 
+			<div id="game" class="col-sm-6">
+				<h3 class="text-center">Press any key to get started!</h3>
 
+				<h3 class="text-center">Wins:</h3>
+				<span>
+					<h4 id="winPoints" class="text-center">0</h4>
+				</span>
 
+				<h3 class="text-center">Current Word:</h3>
+				<span> 
+					<h4 id="currentWord" class="text-center">text</h4>
+				</span>
 
+				<h3 class="text-center"> Number of Guesses remaining:</h3>
+				<span>
+					<h4 id="guessesRemaining" class="text-center"></h4>
+				</span>
 
+				<h3 class="text-center">Letters already guessed:</h3>
+				<span>
+					<h4 id="lettersGuessed" class="text-center"></h4>
+				</span>
+			</div>
+		</div>
+<!-- <audio controls>
+	<source src="#.mp3" type="audio/mpeg"></source>
+	<source src="#.wav" type="audio/wav"></source>
+</audio> -->
+</div>
 
+<script type="text/javascript" src="assets/javascript/game.js"></script>
 
-
-
-
-
-  </body>
+</body>
 </html>
