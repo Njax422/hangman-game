@@ -1,60 +1,45 @@
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-
-	<title>Hangman-Game</title>
-
-	
-	<!--Bootstrap CDN-->
-
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+	<title>Hangman-Game</title>
 </head>
-
 <body>
-<div class="container">
-	<h1>Hangman</h1>
-		<div class="row">
-			<div class="col-sm-6">
-				<!--html canvas drawing or pics goes here--> 
+	<div class="container">
+		<h1>Meme Theme Hangman</h1>
+			<div class="row">
+				<div class="col-sm-6">
+					<!--html canvas drawing or pics goes here--> 
+				</div>
+				<div id="game" class="col-sm-6">
+					<h3 class="text-center">Press any key to get started!</h3>
+
+					<h3 class="text-center">Wins:</h3>
+					<span>
+						<h4 id="winPoints" class="text-center">0</h4>
+					</span>
+
+					<h3 class="text-center">Current Word:</h3>
+					<span> 
+						<h4 id="currentWord" class="text-center">text</h4>
+					</span>
+
+					<h3 class="text-center">Guesses remaining:</h3>
+					<span>
+						<h4 id="guessesRemaining" class="text-center"></h4>
+					</span>
+
+					<h3 class="text-center">Letters guessed:</h3>
+					<span>
+						<h4 id="lettersGuessed" class="text-center"></h4>
+					</span>
+				</div>
 			</div>
-
-			<div id="game" class="col-sm-6">
-				<h3 class="text-center">Press any key to get started!</h3>
-
-				<h3 class="text-center">Wins:</h3>
-				<span>
-					<h4 id="winPoints" class="text-center">0</h4>
-				</span>
-
-				<h3 class="text-center">Current Word:</h3>
-				<span> 
-					<h4 id="currentWord" class="text-center">text</h4>
-				</span>
-
-				<h3 class="text-center"> Number of Guesses remaining:</h3>
-				<span>
-					<h4 id="guessesRemaining" class="text-center"></h4>
-				</span>
-
-				<h3 class="text-center">Letters already guessed:</h3>
-				<span>
-					<h4 id="lettersGuessed" class="text-center"></h4>
-				</span>
-			</div>
-		</div>
-<!-- <audio controls>
-	<source src="#.mp3" type="audio/mpeg"></source>
-	<source src="#.wav" type="audio/wav"></source>
-</audio> -->
-</div>
-
-<script type="text/javascript" src="assets/javascript/game.js"></script>
-
+	</div>
+	<script type="text/javascript" src="assets/javascript/game.js"></script>
 </body>
 </html>
