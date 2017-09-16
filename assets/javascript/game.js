@@ -1,38 +1,6 @@
-var words = [
-	{
-		word:'grumpy cat',
-		image: ""
-	},
-	{
-		word:'lolcat',
-		image: ""
-	},
-	{
-		word:'success kid',
-		image: ""
-	},
-	{
-		word:'kermit',
-		image: ""
-	},
-	{
-		word:'willy wonka',
-		image: ""
-	},
-	{
-		word:'sheldon',
-		image: ""
-	},
-	{
-		word:'oprah',
-		image: ""
-	},
-	{
-		word:'philosoraptor',
-		image: ""
-	}];
+var words = ['grumpy cat','lolcat','success kid','kermit','willy wonka','sheldon','oprah','philosoraptor'];
 var index = Math.floor(Math.random()*words.length);
-var word = words[index].word;
+var word = words[index];
 	console.log('word: ', word);
 var answer = [];
 var guesses = [];
@@ -50,7 +18,8 @@ var keepPlaying;
 
 document.getElementById('currentWord').innerHTML= answer.join("");
 document.getElementById('guessesRemaining').innerHTML=guessesRemaining;
-document.getElementById('winPoints').innerHTML=winPoints; 
+document.getElementById('winPoints').innerHTML=winPoints;
+
 
 	document.onkeyup = function(event){
 		console.log(event);
@@ -102,7 +71,7 @@ document.getElementById('winPoints').innerHTML=winPoints;
 		guessesRemaining = 6;
 		answer.length = 0;
 		index = Math.floor(Math.random()*words.length);	
-		word = words[index].word;
+		word = words[index];
 		console.log(word);
 			for (var i=0; i<word.length; i++){
 				if (word[i]===" ") {
